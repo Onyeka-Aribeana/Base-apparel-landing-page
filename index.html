@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+  </head>
+  <body>
+    <main>
+      <div class="info">
+        <div class="form-wrapper">
+          <div class="logo-wrapper">
+            <img src="images/logo.svg" alt="Base Apparel" />
+          </div>
+          <div class="mobile-image-wrapper">
+            <img src="images/hero-mobile.jpg" alt="" aria-hidden="true" />
+          </div>
+          <div class="text-wrapper">
+            <h1><span>We're</span> coming soon</h1>
+            <p>
+              Hello fellow shoppers! We're currently building our new fashion
+              store. Add your email below to stay up-to-date with announcements
+              and our launch deals.
+            </p>
+          </div>
+          <div class="actual-form">
+            <form
+              action="index.html"
+              class="email-form"
+              autocomplete="off"
+              novalidate
+            >
+              <div class="input-wrapper">
+                <input
+                  type="email"
+                  class="input-field"
+                  id="email"
+                  autocomplete="off"
+                  minlength="4"
+                  required
+                />
+                <label for="email">Email Address</label>
+                <p class="warning"></p>
+                <img
+                  src="images/icon-error.svg"
+                  class="error-icon"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </div>
+              <a href="javascript:;" class="submit-btn"
+                ><img src="images/icon-arrow.svg" alt="" aria-hidden="true"
+              /></a>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="desktop-image-wrapper">
+        <img src="images/hero-desktop.jpg" alt="" aria-hidden="true" />
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+:root {
+  --desaturated-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+  --dark-red: hsl(0, 6%, 24%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+input {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info {
+  background-image: url("../images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.form-wrapper {
+  max-width: 450px;
+}
+
+.logo-wrapper {
+  margin-bottom: 7.2rem;
+}
+
+.mobile-image-wrapper {
+  display: none;
+  height: auto;
+  width: 100%;
+}
+
+.mobile-image-wrapper img {
+  width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+
+.text-wrapper {
+  margin-bottom: 2rem;
+}
+
+.text-wrapper h1 {
+  text-transform: uppercase;
+  font-size: 4rem;
+  letter-spacing: 0.9rem;
+  font-weight: 600;
+  color: var(--dark-red);
+  margin-bottom: 1.6rem;
+}
+
+.text-wrapper h1 span {
+  font-weight: 300;
+  color: var(--desaturated-red);
+}
+
+.text-wrapper p {
+  color: var(--desaturated-red);
+  font-weight: 400;
+  line-height: 2;
+}
+
+form {
+  height: 50px;
+  position: relative;
+}
+
+.input-wrapper {
+  height: 100%;
+  position: relative;
+}
+
+.input-field {
+  width: 100%;
+  height: 100%;
+  background: none;
+  font-size: 0.95rem;
+  border-radius: 9999em;
+  border: 2px hsla(0, 36%, 70%, 0.2) solid;
+  padding: 0.4rem 6rem 0.4rem 1.3rem;
+  color: var(--dark-red);
+  font-weight: 400;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-wrapper label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1.3rem;
+  color: var(--desaturated-red);
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-wrapper .error-icon {
+  position: absolute;
+  top: 50%;
+  right: 4.5rem;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.input-wrapper .warning {
+  color: var(--soft-red);
+  font-size: 0.95rem;
+  position: absolute;
+  left: 1.3rem;
+  bottom: -1.8rem;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.input-field.active {
+  border-color: hsl(0, 74%, 74%);
+}
+
+.input-field.active ~ label {
+  opacity: 0;
+}
+
+.input-field.failed {
+  border-color: var(--soft-red);
+}
+
+.input-field.failed ~ .error-icon {
+  opacity: 1;
+}
+
+.input-field.failed ~ .warning {
+  opacity: 1;
+}
+
+.submit-btn {
+  background: none;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border-radius: 9999em;
+  padding: 1rem;
+  border: none;
+  position: absolute;
+  height: 50px;
+  width: 80px;
+  top: 0;
+  text-align: center;
+  right: -1.3rem;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 86%));
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.desktop-image-wrapper {
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1060px) {
+  main {
+    max-width: 100%;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .info {
+    margin: 0;
+  }
+
+  .desktop-image-wrapper {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  main {
+    max-width: 100%;
+    height: auto;
+    flex-direction: column;
+    margin: 0 0;
+  }
+
+  .form-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .logo-wrapper {
+    margin: 0;
+    padding: 2.5rem;
+  }
+  .mobile-image-wrapper {
+    display: block;
+  }
+
+  .info {
+    padding: 0;
+  }
+  .text-wrapper {
+    text-align: center;
+    padding: 2.8rem 1.5rem 0;
+    margin-top: 1.4rem;
+  }
+
+  .actual-form {
+    max-width: 450px;
+    padding: 0 2.1rem 0 1.8rem;
+    margin: 0 auto 3.8rem;
+  }
+
+  .text-wrapper h1 {
+    font-size: 2.9rem;
+  }
+}
